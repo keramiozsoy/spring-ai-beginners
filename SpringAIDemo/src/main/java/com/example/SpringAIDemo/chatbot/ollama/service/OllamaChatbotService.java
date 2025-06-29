@@ -1,15 +1,16 @@
-package com.example.SpringAIDemo.chatbot.openai.service;
+package com.example.SpringAIDemo.chatbot.ollama.service;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OpenAIChatbotService {
+public class OllamaChatbotService {
+
     private final ChatClient chatClient;
 
-    OpenAIChatbotService(@Qualifier("openAiChatClient") ChatClient openAiChatClient){
-        this.chatClient = openAiChatClient;
+    OllamaChatbotService(@Qualifier("ollamaChatClient") ChatClient chatClient){
+        this.chatClient = chatClient;
     }
 
     public String chat(String userMessage) {

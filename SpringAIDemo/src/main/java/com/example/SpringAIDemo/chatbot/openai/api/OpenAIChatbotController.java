@@ -16,8 +16,8 @@ public class OpenAIChatbotController {
         this.openAIChatbotService = openAIChatbotService;
     }
 
-    @GetMapping("/chat/{chatId}/{userMessage}")
-    public String chat(@PathVariable String chatId, @PathVariable String userMessage) {
-        return openAIChatbotService.chat(chatId, userMessage);
+    @GetMapping("/chat/{userMessage}")
+    public String chat(@PathVariable String userMessage) {
+        return openAIChatbotService.chat(userMessage);
     }
 }

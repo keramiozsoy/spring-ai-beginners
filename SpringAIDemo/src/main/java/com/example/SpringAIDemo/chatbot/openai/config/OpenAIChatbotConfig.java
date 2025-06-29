@@ -9,10 +9,6 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class OpenAIChatbotConfig {
-//    @Bean
-//    ChatMemory chatMemory() {
-//        return new InMemoryChatMemory();
-//    }
 
     @Bean("openAiChatClient")
     public ChatClient openAiChatClient(OpenAiChatModel chatModel) {
