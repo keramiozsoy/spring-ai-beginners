@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public
-@RequestMapping("/ollama/chatbot") class OllamaChatbotController {
+@RequestMapping("/v1/ollama/chatbot") class OllamaChatbotController {
 
     private final OllamaChatbotService ollamaChatbotService;
 

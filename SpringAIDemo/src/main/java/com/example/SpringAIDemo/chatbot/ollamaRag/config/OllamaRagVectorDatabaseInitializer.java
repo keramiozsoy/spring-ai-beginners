@@ -1,12 +1,10 @@
-package com.example.SpringAIDemo.chatbot.ollama.config;
+package com.example.SpringAIDemo.chatbot.ollamaRag.config;
 import jakarta.annotation.PostConstruct;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.reader.TextReader;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
 import org.springframework.ai.vectorstore.VectorStore;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.nio.charset.Charset;
@@ -14,11 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class VectorDatabaseInitializer {
+public class OllamaRagVectorDatabaseInitializer {
 
     private final VectorStore vectorStore;
 
-    VectorDatabaseInitializer(VectorStore vectorStore) {
+    OllamaRagVectorDatabaseInitializer(VectorStore vectorStore) {
         this.vectorStore = vectorStore;
     }
 

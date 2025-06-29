@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/openai/chatbot")
+@RequestMapping("/v1/openai/chatbot")
 public class OpenAIChatbotController {
 
     private final OpenAIChatbotService openAIChatbotService;

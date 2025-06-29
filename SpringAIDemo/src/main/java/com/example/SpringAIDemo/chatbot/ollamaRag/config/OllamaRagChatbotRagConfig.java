@@ -1,4 +1,4 @@
-package com.example.SpringAIDemo.chatbot.ollama.config;
+package com.example.SpringAIDemo.chatbot.ollamaRag.config;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.embedding.EmbeddingModel;
@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
 @Configuration
-public class OllamaChatbotRagConfig {
+public class OllamaRagChatbotRagConfig {
 
     @Bean
     public EmbeddingModel embeddingModel(OllamaApi ollamaApi) {
@@ -35,17 +35,5 @@ public class OllamaChatbotRagConfig {
                         .build())
                 .build();
     }
-
-
-    @Bean("ollamaChatClient")
-    public ChatClient ollamaChatClient(OllamaChatModel chatModel, RetrievalAugmentationAdvisor ragAdvisor) {
-        ClassPathResource systemPrompt = new ClassPathResource("prompts/prompt1.txt");
-
-        return ChatClient.builder(chatModel)
-                .defaultAdvisors(ragAdvisor)
-                .defaultSystem(systemPrompt)
-                .build();
-    }
-
 
 }

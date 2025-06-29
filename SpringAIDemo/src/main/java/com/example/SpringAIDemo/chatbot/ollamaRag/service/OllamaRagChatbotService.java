@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OllamaChatbotService {
+public class OllamaRagChatbotService {
 
     private final ChatClient chatClient;
 
-    OllamaChatbotService(@Qualifier("ollamaChatClient") ChatClient chatClient){
+    OllamaRagChatbotService(@Qualifier("ollamaRagChatClient") ChatClient chatClient){
         this.chatClient = chatClient;
     }
 
