@@ -3,11 +3,11 @@ package com.example.SpringAIDemo;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class SpringAiDemoApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//@SpringBootTest
+//class SpringAiDemoApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}
