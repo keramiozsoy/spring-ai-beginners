@@ -11,8 +11,8 @@ public class LlamaChatbotService {
 
     private final ChatClient chatClient;
 
-    LlamaChatbotService(@Qualifier("ollamaChatClient") ChatClient ollamaChatClient){
-        this.chatClient = ollamaChatClient;
+    LlamaChatbotService(@Qualifier("ollamaChatClient") ChatClient chatClient){
+        this.chatClient = chatClient;
     }
 
     public String chat(String chatId, String userMessage) {

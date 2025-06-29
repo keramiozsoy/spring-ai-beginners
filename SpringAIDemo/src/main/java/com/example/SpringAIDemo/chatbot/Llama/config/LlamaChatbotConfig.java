@@ -4,6 +4,7 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +16,7 @@ public class LlamaChatbotConfig {
 //        return new InMemoryChatMemory();
 //    }
     @Bean("ollamaChatClient")
-    public ChatClient ollamaChatClient(@Qualifier("ollamaChatModel") ChatModel chatModel) {
+    public ChatClient ollamaChatClient(OllamaChatModel chatModel) {
         return ChatClient.builder(chatModel).build();
     }
 
