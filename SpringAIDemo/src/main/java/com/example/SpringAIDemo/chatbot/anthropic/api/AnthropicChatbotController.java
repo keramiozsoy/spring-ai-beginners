@@ -1,7 +1,6 @@
 package com.example.SpringAIDemo.chatbot.anthropic.api;
 
 import com.example.SpringAIDemo.chatbot.anthropic.service.AnthropicChatbotService;
-import com.example.SpringAIDemo.chatbot.openai.service.OpenAIChatbotService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

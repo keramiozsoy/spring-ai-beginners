@@ -1,7 +1,6 @@
 package com.example.SpringAIDemo.chatbot.ollama.api;
 
 import com.example.SpringAIDemo.chatbot.ollama.service.OllamaChatbotService;
-import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
