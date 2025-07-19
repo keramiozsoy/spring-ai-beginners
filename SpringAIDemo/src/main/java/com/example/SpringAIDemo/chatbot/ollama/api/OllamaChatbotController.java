@@ -26,6 +26,7 @@ public class OllamaChatbotController {
 
     @GetMapping("/chat/chatResponse/{userMessage}")
     public ChatResponse chatResponse(@PathVariable String userMessage) {
+        // TODO : add default userMessage to show
         return ollamaChatbotService.chatResponse(userMessage);
     }
 

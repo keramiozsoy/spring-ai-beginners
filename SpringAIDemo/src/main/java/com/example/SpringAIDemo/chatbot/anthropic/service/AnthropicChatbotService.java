@@ -9,8 +9,8 @@ import reactor.core.publisher.Flux;
 public class AnthropicChatbotService {
     private final ChatClient chatClient;
 
-    AnthropicChatbotService(@Qualifier("anthropicChatClient") ChatClient anthropicChatClient){
-        this.chatClient = anthropicChatClient;
+    AnthropicChatbotService(@Qualifier("anthropicChatClient") ChatClient chatClient){
+        this.chatClient = chatClient;
     }
 
     public String chat(String userMessage) {
