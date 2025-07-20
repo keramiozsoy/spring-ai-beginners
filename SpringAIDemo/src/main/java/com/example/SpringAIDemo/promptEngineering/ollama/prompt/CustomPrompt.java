@@ -1,6 +1,6 @@
 package com.example.SpringAIDemo.promptEngineering.ollama.prompt;
 
-public class Prompt {
+public class CustomPrompt {
     public static class UserMessageOutOfScope {
         public static final String SYSTEM_MESSAGE_CHILD_FOR_MATH = """
             You are a friendly math teacher helping a child who is learning math for the first time.
