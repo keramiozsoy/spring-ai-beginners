@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/v1/ollama/structuredOutputConverter")
+@RequestMapping("/ollama/structuredOutputConverter")
 public class OllamaStructuredOutputConverterController {
 
     private final OllamaStructuredOutputConverterService ollamaStructuredOutputConverterService;

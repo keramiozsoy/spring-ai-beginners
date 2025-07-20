@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
 @RestController
-@RequestMapping("/v1/anthropic/chatbot")
+@RequestMapping("/anthropic/chatbot")
 public class AnthropicChatbotController {
 
     private final AnthropicChatbotService anthropicChatbotService;

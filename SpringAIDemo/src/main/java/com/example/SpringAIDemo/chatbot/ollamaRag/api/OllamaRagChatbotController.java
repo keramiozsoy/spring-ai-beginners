@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/v2/ollama/rag/chatbot")
+@RequestMapping("/ollama/rag/chatbot")
 public class OllamaRagChatbotController {
 
     private final OllamaRagChatbotService ollamaRagChatbotService;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/v1/ollama/promptEngineering")
+@RequestMapping("/ollama/promptEngineering")
 public class OllamaPromptEngineeringController {
 
     private final OllamaPromptEngineeringService ollamaPromptEngineeringService;
