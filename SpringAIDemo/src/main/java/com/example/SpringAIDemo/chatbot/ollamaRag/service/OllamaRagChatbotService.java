@@ -9,7 +9,7 @@ public class OllamaRagChatbotService {
 
     private final ChatClient chatClient;
 
-    OllamaRagChatbotService(@Qualifier("ollamaRagChatClient") ChatClient chatClient){
+    OllamaRagChatbotService(@Qualifier("ollamaRagChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 

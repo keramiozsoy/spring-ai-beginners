@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 public class OpenAIChatbotService {
     private final ChatClient chatClient;
 
-    OpenAIChatbotService(@Qualifier("openAiChatClient") ChatClient openAiChatClient){
+    OpenAIChatbotService(@Qualifier("openAiChatClient") ChatClient openAiChatClient) {
         this.chatClient = openAiChatClient;
     }
 

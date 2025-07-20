@@ -1,4 +1,5 @@
 package com.example.SpringAIDemo.chatbot.ollamaRag.config;
+
 import jakarta.annotation.PostConstruct;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.reader.TextReader;

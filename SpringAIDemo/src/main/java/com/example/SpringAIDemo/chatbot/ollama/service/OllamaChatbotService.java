@@ -11,7 +11,7 @@ public class OllamaChatbotService {
 
     private final ChatClient chatClient;
 
-    OllamaChatbotService(@Qualifier("ollamaChatClient") ChatClient chatClient){
+    OllamaChatbotService(@Qualifier("ollamaChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 

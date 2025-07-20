@@ -9,7 +9,7 @@ import reactor.core.publisher.Flux;
 public class AnthropicChatbotService {
     private final ChatClient chatClient;
 
-    AnthropicChatbotService(@Qualifier("anthropicChatClient") ChatClient chatClient){
+    AnthropicChatbotService(@Qualifier("anthropicChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 

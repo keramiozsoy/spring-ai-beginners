@@ -44,7 +44,7 @@ public class OllamaStructuredOutputConverterController {
     public ActorsFilms structuredOutputFormatter(
             @RequestParam(defaultValue = CustomPrompt.Structured.PromptUserSpec.USER_MESSAGE) String userMessage,
             @RequestParam(defaultValue = CustomPrompt.Structured.PromptUserSpec.USER_MESSAGE_PARAM_KEY) String paramKey,
-            @RequestParam(defaultValue = CustomPrompt.Structured.PromptUserSpec.USER_MESSAGE_PARAM_VALUE) String paramValue){
+            @RequestParam(defaultValue = CustomPrompt.Structured.PromptUserSpec.USER_MESSAGE_PARAM_VALUE) String paramValue) {
         return ollamaStructuredOutputConverterService.structuredOutputFormatter(userMessage, paramKey, paramValue);
     }
 }
