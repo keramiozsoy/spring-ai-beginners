@@ -7,10 +7,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class OllamaPromptEngineeringService {
 
-
     private final ChatClient chatClient;
 
-    OllamaPromptEngineeringService(@Qualifier("ollamaPromptEngineeringChatClient") ChatClient chatClient) {
+    OllamaPromptEngineeringService(@Qualifier("ollamaPromptEngineeringOllamaChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 

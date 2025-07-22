@@ -14,7 +14,7 @@ public class OllamaStructuredOutputConverterService {
 
     private final ChatClient chatClient;
 
-    OllamaStructuredOutputConverterService(@Qualifier("OllamaStructuredOutputConverterChatClient") ChatClient chatClient) {
+    OllamaStructuredOutputConverterService(@Qualifier("ollamaStructuredOutputConverterChatClient") ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 

@@ -5,6 +5,7 @@ import org.springframework.ai.document.Document;
 import org.springframework.ai.reader.TextReader;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
 import org.springframework.ai.vectorstore.VectorStore;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +18,7 @@ public class OllamaRagVectorDatabaseInitializer {
 
     private final VectorStore vectorStore;
 
-    OllamaRagVectorDatabaseInitializer(VectorStore vectorStore) {
+    OllamaRagVectorDatabaseInitializer(@Qualifier("ollamaRagChatbotVectorStore") VectorStore vectorStore) {
         this.vectorStore = vectorStore;
     }
 
