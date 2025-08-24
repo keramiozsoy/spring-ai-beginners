@@ -18,11 +18,11 @@ public class OllamaMultimodalityService {
         this.chatClient = chatClient;
     }
 
-    public String imageToText() {
+    public String imageToText(String userMessage) {
         return chatClient
                 .prompt()
                 .user(u -> {
-                    u.text("Could you please describe what you see in the following image");
+                    u.text(userMessage);
                     u.media(MimeTypeUtils.IMAGE_PNG, image);
                 })
                 .call()
