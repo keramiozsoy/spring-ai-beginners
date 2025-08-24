@@ -1,7 +1,7 @@
 package com.example.SpringAIDemo.multimodality.ollama.api;
 
-import com.example.SpringAIDemo.multimodality.ollama.service.OllamaMultimodalityService;
 import com.example.SpringAIDemo.multimodality.ollama.prompt.CustomPrompt;
+import com.example.SpringAIDemo.multimodality.ollama.service.OllamaMultimodalityService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

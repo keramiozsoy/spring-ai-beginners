@@ -2,7 +2,6 @@ package com.example.SpringAIDemo.chatmemory.ollama.api;
 
 import com.example.SpringAIDemo.chatmemory.ollama.prompt.CustomPrompt;
 import com.example.SpringAIDemo.chatmemory.ollama.service.OllamaChatMemoryService;
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
