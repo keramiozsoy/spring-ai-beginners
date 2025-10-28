@@ -24,7 +24,7 @@ public class OllamaRagVectorDatabaseInitializer {
 
     @PostConstruct
     void init() {
-        ClassPathResource classPathResource = new ClassPathResource("rules/rule1.txt");
+        ClassPathResource classPathResource = new ClassPathResource("ollamaRag/rules/rule1.txt");
         var textReader = new TextReader(classPathResource);
         textReader.getCustomMetadata().put("filename", "rule1");
         textReader.setCharset(Charset.defaultCharset());

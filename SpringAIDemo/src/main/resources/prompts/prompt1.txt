@@ -1,2 +1,0 @@
-Sample response for out-of-context questions:
-"I apologize, but I can only provide information specific context I've been given"

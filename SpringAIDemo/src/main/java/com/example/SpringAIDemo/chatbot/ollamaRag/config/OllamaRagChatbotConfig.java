@@ -61,7 +61,7 @@ public class OllamaRagChatbotConfig {
                 .ollamaApi(ollamaApi)
                 .defaultOptions(
                         OllamaOptions.builder()
-                                .model(OllamaModel.MXBAI_EMBED_LARGE)
+                                .model(OllamaModel.MXBAI_EMBED_LARGE) // To store sentences/words - BERT architecture
 //                                .model(OllamaModel.NOMIC_EMBED_TEXT)
                                 .build()
                 )
@@ -93,7 +93,7 @@ public class OllamaRagChatbotConfig {
                                        @Qualifier("ollamaRagChatbotRagAdvisor") RetrievalAugmentationAdvisor ragAdvisor) {
 
 
-        ClassPathResource systemPrompt = new ClassPathResource("prompts/prompt1.txt");
+        ClassPathResource systemPrompt = new ClassPathResource("ollamaRag/prompts/prompt1.txt");
 
         return ChatClient.builder(chatModel)
                 .defaultAdvisors(ragAdvisor)
