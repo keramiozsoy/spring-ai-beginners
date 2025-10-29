@@ -7,8 +7,13 @@ public class CustomPrompt {
                 Hello How are you
                 """;
 
+        public static final String ASK_RESEARCH_DEPARTMENT = """
+                Tell us something about Research and Development
+                """;
+
         public static final String ASK_HUMAN_RESOURCES_DEPARTMENT = """
                 Tell us something about Human Resources Department
                 """;
+
     }
 }

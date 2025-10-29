@@ -73,7 +73,7 @@ public class OllamaRagChatbotConfig {
     }
 
     @Bean("ollamaRagChatbotVectorStore")
-    public VectorStore vectorStore(@Qualifier("ollamaRagChatbotEmbeddingModel") EmbeddingModel embeddingModel) {
+    public SimpleVectorStore vectorStore(@Qualifier("ollamaRagChatbotEmbeddingModel") EmbeddingModel embeddingModel) {
         return SimpleVectorStore.builder(embeddingModel).build();
     }
 
