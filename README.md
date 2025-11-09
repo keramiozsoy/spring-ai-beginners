@@ -37,29 +37,41 @@ http://localhost:8080/swagger-ui/index.html
 
 ### 1 Blocking-Request
 
+```
+
 curl -X 'GET' \
   'http://localhost:8080/ollama/chatbot/example1/chat?userMessage=Hello' \
   -H 'accept: */*'
 
+```
 
 ### 2 Non-Blocking-Request
 
 --no-buffer
 
+```
 
 curl --no-buffer -X 'GET' \
   'http://localhost:8080/ollama/chatbot/example2/chat/stream?userMessage=Hello' \
   -H 'accept: */*'
-
+```
 
 
 ### 3 Chat Reponse / Token
 
 Response returned by AI provider. You can change model and test by yourself.
 
+```
 curl -X 'GET' \
   'http://localhost:8080/ollama/chatbot/example3/chat/chatResponse?userMessage=Hello' \
   -H 'accept: */*'
+
+```
+
+
+
+
+## ollama-chat-memory-controller
 
 
 
