@@ -10,7 +10,52 @@ https://ollama.com/download
 
 http://localhost:8080/swagger-ui/index.html
 
+
+# example model names ->
+##  org.springframework.ai.openai.api.OpenAiApi.ChatModel
+##  org.springframework.ai.openai.api.OpenAiAudioApi.WhisperModel
+##  org.springframework.ai.openai.api.OpenAiImageApi.ImageModel
+
+##  org.springframework.ai.anthropic.api.AnthropicApi.ChatModel
+
+##  org.springframework.ai.ollama.api.OllamaModel
+
+
+
 # curl
+
+
+## ollama-chatbot-controller
+
+### 1 Blocking-Request
+
+curl -X 'GET' \
+  'http://localhost:8080/ollama/chatbot/example1/chat?userMessage=Hello' \
+  -H 'accept: */*'
+
+
+### 2 Non-Blocking-Request
+
+--no-buffer
+
+
+curl --no-buffer -X 'GET' \
+  'http://localhost:8080/ollama/chatbot/example2/chat/stream?userMessage=Hello' \
+  -H 'accept: */*'
+
+
+
+### 3 Chat Reponse / Token
+
+Response returned by AI provider. You can change model and test by yourself.
+
+curl -X 'GET' \
+  'http://localhost:8080/ollama/chatbot/example3/chat/chatResponse?userMessage=Hello' \
+  -H 'accept: */*'
+
+
+
+
 
 
 ## 1. OpenAI Chatbot - Simple Chat

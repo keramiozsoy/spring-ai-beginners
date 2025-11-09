@@ -36,6 +36,7 @@ public class OllamaChatbotConfig {
                 .defaultOptions(
                         OllamaOptions.builder()
                                 .model(OllamaModel.LLAMA3)
+//                                .model("qwen3:0.6b")
                                 .build()
                 )
                 .modelManagementOptions(

@@ -75,6 +75,7 @@ public class OllamaChatMemoryConfig {
         return ChatClient.builder(chatModel)
                 .defaultAdvisors(messageChatMemoryAdvisor)
                 .build();
+//        https://docs.spring.io/spring-ai/reference/api/advisors.html
     }
 
 }
