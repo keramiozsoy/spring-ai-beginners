@@ -28,6 +28,13 @@ public class OllamaStructuredOutputConverterService {
     }
 
     public ChatResponse chatResponse(String userMessage) {
+        // org.springframework.ai.audio.transcription.AudioTranscriptionResponse
+        // org.springframework.ai.chat.model.ChatResponse
+        // org.springframework.ai.embedding.EmbeddingResponse
+        // org.springframework.ai.image.ImageResponse
+        // org.springframework.ai.moderation.ModerationResponse
+        // org.springframework.ai.openai.audio.speech.Speech
+
         return chatClient
                 .prompt()
                 .user(userMessage)

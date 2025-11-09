@@ -21,26 +21,26 @@ public class OllamaStructuredOutputConverterController {
         this.ollamaStructuredOutputConverterService = ollamaStructuredOutputConverterService;
     }
 
-    @GetMapping("/1/chat/content")
+    @GetMapping("/example1/chat/content")
     public String content(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.USER_MESSAGE) String userMessage) {
         return ollamaStructuredOutputConverterService.content(userMessage);
     }
 
-    @GetMapping("/2/chat/chatResponse")
+    @GetMapping("/example2/chat/chatResponse")
     public ChatResponse chatResponse(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.USER_MESSAGE) String userMessage) {
         return ollamaStructuredOutputConverterService.chatResponse(userMessage);
     }
 
-    @GetMapping("/3/chat/chatClientResponse")
+    @GetMapping("/example3/chat/chatClientResponse")
     public ChatClientResponse chatClientResponse(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.USER_MESSAGE) String userMessage) {
         return ollamaStructuredOutputConverterService.chatClientResponse(userMessage);
     }
 
 
-    @GetMapping("/4/chat/structuredOutputFormatter")
+    @GetMapping("/example4/chat/structuredOutputFormatter")
     public ActorsFilms structuredOutputFormatter(
             @RequestParam(defaultValue = CustomPrompt.Structured.PromptUserSpec.USER_MESSAGE) String userMessage,
             @RequestParam(defaultValue = CustomPrompt.Structured.PromptUserSpec.USER_MESSAGE_PARAM_KEY) String paramKey,

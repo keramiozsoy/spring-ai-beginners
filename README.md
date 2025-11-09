@@ -153,6 +153,61 @@ curl -X 'GET' \
 ```
 
 
+
+## Convert Output To Specific Format
+
+
+structuredOutputConverter
+
+
+#### 1 Output is String
+
+```
+
+curl -X 'GET' \
+  'http://localhost:8080/ollama/structuredOutputConverter/example1/chat/content?userMessage=Generate%20the%20filmography%20of%205%20movies%20for%20random%20actor%0A' \
+  -H 'accept: */*'
+
+```
+
+
+
+#### 2 Output is Chat Response
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/structuredOutputConverter/example2/chat/chatResponse?userMessage=Generate%20the%20filmography%20of%205%20movies%20for%20random%20actor%0A' \
+  -H 'accept: */*'
+```
+
+
+#### 3 Output is Chat Client Response
+
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/structuredOutputConverter/example3/chat/chatClientResponse?userMessage=Generate%20the%20filmography%20of%205%20movies%20for%20random%20actor%0A' \
+  -H 'accept: */*'
+```
+
+
+#### 4 Output is Custom Class Formatted With StructuredOutputConverter
+
+Chat reponse is parsed automatically.
+
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/structuredOutputConverter/example4/chat/structuredOutputFormatter?userMessage=Generate%20the%20filmography%20of%205%20movies%20for%20%7Bactor%7D%0A&paramKey=actor&paramValue=Tom%20Hanks' \
+  -H 'accept: */*'
+```
+
+
+
+
+## Convert Output To Specific Format
+
+
 ---
 
 

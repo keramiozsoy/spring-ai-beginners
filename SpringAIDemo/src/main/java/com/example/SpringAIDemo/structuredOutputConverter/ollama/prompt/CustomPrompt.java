@@ -4,7 +4,7 @@ public class CustomPrompt {
 
     public static class UnStructured {
         public static final String USER_MESSAGE = """
-                Generate the filmography of 5 movies for actor
+                Generate the filmography of 5 movies for random actor
                 """;
 
     }
