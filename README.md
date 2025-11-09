@@ -222,6 +222,7 @@ curl -X 'GET' \
 
 ## Rag - Document
 
+ollama-rag-chatbot-controller
 
 
 #### 1 Out of rule context
@@ -250,6 +251,33 @@ Rag Store is ready.
 ```
 curl -X 'GET' \
   'http://localhost:8080/ollama/rag/chatbot/example3/chat/inContext?userMessage=Tell%20us%20something%20about%20Human%20Resources%20Department%0A' \
+  -H 'accept: */*'
+
+```
+
+
+
+
+## Tools
+
+ollama-tools-controller
+
+
+#### 1 Without Tool
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/tools/example1/chat/chatWithoutTools?userMessage=What%20is%20my%20zone%20name%2C%20What%20is%20the%20date%20tomorrow%0A' \
+  -H 'accept: */*'
+```
+
+
+#### 2 Tool Calling
+
+```
+
+curl -X 'GET' \
+  'http://localhost:8080/ollama/tools/example2/chat/chatWithTools?userMessage=What%20is%20my%20zone%20name%2C%20What%20is%20the%20date%20tomorrow%0A' \
   -H 'accept: */*'
 
 ```
