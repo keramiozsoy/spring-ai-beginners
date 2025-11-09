@@ -11,14 +11,14 @@ https://ollama.com/download
 http://localhost:8080/swagger-ui/index.html
 
 
-# example model names ->
-##  org.springframework.ai.openai.api.OpenAiApi.ChatModel
-##  org.springframework.ai.openai.api.OpenAiAudioApi.WhisperModel
-##  org.springframework.ai.openai.api.OpenAiImageApi.ImageModel
+# example model names
+- org.springframework.ai.openai.api.OpenAiApi.ChatModel
+- org.springframework.ai.openai.api.OpenAiAudioApi.WhisperModel
+- org.springframework.ai.openai.api.OpenAiImageApi.ImageModel
 
-##  org.springframework.ai.anthropic.api.AnthropicApi.ChatModel
+- org.springframework.ai.anthropic.api.AnthropicApi.ChatModel
 
-##  org.springframework.ai.ollama.api.OllamaModel
+- org.springframework.ai.ollama.api.OllamaModel
 
 
 
