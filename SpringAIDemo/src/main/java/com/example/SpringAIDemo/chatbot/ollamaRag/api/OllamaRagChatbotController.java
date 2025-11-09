@@ -14,19 +14,19 @@ public class OllamaRagChatbotController {
         this.ollamaRagChatbotService = ollamaRagChatbotService;
     }
 
-    @GetMapping("/1/chat/outofcontext")
+    @GetMapping("/example1/chat/outOfContext")
     public String chatOutOfContext(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.ASK_HELLO) String userMessage) {
         return ollamaRagChatbotService.chat(userMessage);
     }
 
-    @GetMapping("/2/chat/incontextNotPermitted")
-    public String incontextNotPermitted(
+    @GetMapping("/example2/chat/inContextNotPermitted")
+    public String inContextNotPermitted(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.ASK_RESEARCH_DEPARTMENT) String userMessage) {
         return ollamaRagChatbotService.chat(userMessage);
     }
 
-    @GetMapping("/3/chat/incontext")
+    @GetMapping("/example3/chat/inContext")
     public String chatInContext(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.ASK_HUMAN_RESOURCES_DEPARTMENT) String userMessage) {
         return ollamaRagChatbotService.chat(userMessage);

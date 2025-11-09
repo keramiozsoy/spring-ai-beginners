@@ -52,8 +52,8 @@ public class OllamaChatMemoryConfig {
     public MessageWindowChatMemory ollamaChatMemory(){
         return MessageWindowChatMemory
                 .builder()
-                //.chatMemoryRepository()
-                //.maxMessages()
+                //.chatMemoryRepository() -> When you need to store on db (Postgres , MySQL etc)
+                //.maxMessages() -> How many messages store in memory
                 .build();
     }
 

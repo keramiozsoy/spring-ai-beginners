@@ -74,39 +74,6 @@ curl -X 'GET' \
 
 
 
-## Chat Memory
-
-ollama-chat-memory-controller
-
-
-#### 1 Ask Before Info
-
-
-```
-curl -X 'GET' \
-  'http://localhost:8080/ollama/chat/memory/example1/askBeforeInfo?userMessage=What%20is%20the%20name%20of%20asdfa%3F' \
-  -H 'accept: */*'
-```
-
-
-#### 2 Share Info
-
-```
-curl -X 'GET' \
-  'http://localhost:8080/ollama/chat/memory/example2/shareInfo?userMessage=Hi%2C%20The%20cat%20name%20is%20Blue.%0A' \
-  -H 'accept: */*'
-```
-
-#### 3 Ask About Info
-
-```
-curl -X 'GET' \
-  'http://localhost:8080/ollama/chat/memory/example3/askAboutInfo?userMessage=What%20is%20the%20name%20of%20cat%3F%0A' \
-  -H 'accept: */*'
-```
-
-
-
 
 ## Prompt
 
@@ -220,7 +187,72 @@ curl -X 'GET' \
 
 
 
+## Chat Memory
 
+ollama-chat-memory-controller
+
+
+#### 1 Ask Before Info
+
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/chat/memory/example1/askBeforeInfo?userMessage=What%20is%20the%20name%20of%20asdfa%3F' \
+  -H 'accept: */*'
+```
+
+
+#### 2 Share Info
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/chat/memory/example2/shareInfo?userMessage=Hi%2C%20The%20cat%20name%20is%20Blue.%0A' \
+  -H 'accept: */*'
+```
+
+#### 3 Ask About Info
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/chat/memory/example3/askAboutInfo?userMessage=What%20is%20the%20name%20of%20cat%3F%0A' \
+  -H 'accept: */*'
+```
+
+
+
+## Rag - Document
+
+
+
+#### 1 Out of rule context
+
+```
+
+curl -X 'GET' \
+  'http://localhost:8080/ollama/rag/chatbot/example1/chat/outOfContext?userMessage=Hello%20How%20are%20you%0A' \
+  -H 'accept: */*'
+```
+
+
+#### 2 In context but rule does not allowed to share information
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/rag/chatbot/example2/chat/inContextNotPermitted?userMessage=Tell%20us%20something%20about%20Research%20and%20Development%0A' \
+  -H 'accept: */*'
+
+```
+
+#### 3 In Context
+
+Rag Store is ready.
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/rag/chatbot/example3/chat/inContext?userMessage=Tell%20us%20something%20about%20Human%20Resources%20Department%0A' \
+  -H 'accept: */*'
+
+```
 
 ---
 
