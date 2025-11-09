@@ -12,11 +12,19 @@ http://localhost:8080/swagger-ui/index.html
 
 
 # example model names
+
+#### openai
+
 - org.springframework.ai.openai.api.OpenAiApi.ChatModel
 - org.springframework.ai.openai.api.OpenAiAudioApi.WhisperModel
 - org.springframework.ai.openai.api.OpenAiImageApi.ImageModel
 
+
+#### anthropic
+
 - org.springframework.ai.anthropic.api.AnthropicApi.ChatModel
+
+#### ollama
 
 - org.springframework.ai.ollama.api.OllamaModel
 
