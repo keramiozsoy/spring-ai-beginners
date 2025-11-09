@@ -72,10 +72,14 @@ public class OllamaChatMemoryConfig {
     @Bean("ollamaChatMemoryChatClient")
     public ChatClient ollamaChatClient(@Qualifier("ollamaChatMemoryOllamaChatModel") OllamaChatModel chatModel,
                                        @Qualifier("ollamaMessageChatMemoryAdvisor") MessageChatMemoryAdvisor messageChatMemoryAdvisor) {
+
+        // https://docs.spring.io/spring-ai/reference/api/advisors.html
+        // MessageChatMemoryAdvisor
+
         return ChatClient.builder(chatModel)
                 .defaultAdvisors(messageChatMemoryAdvisor)
                 .build();
-//        https://docs.spring.io/spring-ai/reference/api/advisors.html
+
     }
 
 }
