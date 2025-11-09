@@ -9,7 +9,7 @@ public class CustomPrompt {
                 If the question is outside this scope, politely reply: "You are out of scope, please ask again."
                 """;
         public static final String USER_MESSAGE_IN_SCOPE = """
-                 teach me 3 + 5
+                teach me four plus five
                 """;
 
         public static final String USER_MESSAGE_NOT_IN_SCOPE = """

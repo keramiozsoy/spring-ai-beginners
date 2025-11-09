@@ -33,7 +33,10 @@ http://localhost:8080/swagger-ui/index.html
 # curl
 
 
-## ollama-chatbot-controller
+## Chat
+
+
+ollama-chatbot-controller
 
 #### 1 Blocking-Request
 
@@ -71,9 +74,9 @@ curl -X 'GET' \
 
 
 
-## ollama-chat-memory-controller
+## Chat Memory
 
-Chat Memory
+ollama-chat-memory-controller
 
 
 #### 1 Ask Before Info
@@ -104,6 +107,13 @@ curl -X 'GET' \
 
 
 
+
+## Prompt
+
+ollama-prompt-engineering-controller
+
+
+## 
 
 
 

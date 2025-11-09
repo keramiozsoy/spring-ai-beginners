@@ -18,14 +18,29 @@ public class OllamaPromptEngineeringController {
         this.ollamaPromptEngineeringService = ollamaPromptEngineeringService;
     }
 
-    @GetMapping("/1/chat/userMessageNotInScope")
+    @GetMapping("/example1/chat/userMessageNotInScope")
     public String chatUserMessageNotInScope(
             @RequestParam(defaultValue = CustomPrompt.UserMessageOutOfScope.SYSTEM_MESSAGE_CHILD_FOR_MATH) String systemMessage,
             @RequestParam(defaultValue = CustomPrompt.UserMessageOutOfScope.USER_MESSAGE_NOT_IN_SCOPE) String userMessage) {
-        return ollamaPromptEngineeringService.chatUserMessageNotInScope(systemMessage, userMessage);
+        return ollamaPromptEngineeringService.chatUserMessageScope(systemMessage, userMessage);
     }
 
-    @GetMapping("/2/chat/promptUserSpecParamKey")
+    @GetMapping("/example2/chat/userMessageInScope")
+    public String chatUserMessageNotScope(
+            @RequestParam(defaultValue = CustomPrompt.UserMessageOutOfScope.SYSTEM_MESSAGE_CHILD_FOR_MATH) String systemMessage,
+            @RequestParam(defaultValue = CustomPrompt.UserMessageOutOfScope.USER_MESSAGE_IN_SCOPE) String userMessage) {
+        return ollamaPromptEngineeringService.chatUserMessageScope(systemMessage, userMessage);
+    }
+
+    @GetMapping("/example3/chat/userMessagePromptType")
+    public String chatUserMessageScopePromptType(
+            @RequestParam(defaultValue = CustomPrompt.UserMessageOutOfScope.SYSTEM_MESSAGE_CHILD_FOR_MATH) String systemMessage,
+            @RequestParam(defaultValue = CustomPrompt.UserMessageOutOfScope.USER_MESSAGE_IN_SCOPE) String userMessage) {
+        return ollamaPromptEngineeringService.chatUserMessageScopePromptType(systemMessage, userMessage);
+    }
+
+
+    @GetMapping("/example4/chat/promptUserSpecParamKey")
     public String chatPromptUserSpec(
             @RequestParam(defaultValue = CustomPrompt.PromptUserSpec.SYSTEM_MESSAGE) String systemMessage,
             @RequestParam(defaultValue = CustomPrompt.PromptUserSpec.USER_MESSAGE) String userMessage,
