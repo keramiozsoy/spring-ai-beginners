@@ -17,7 +17,7 @@ public class OllamaMultimodalityController {
         this.ollamaMultimodalityService = ollamaMultimodalityService;
     }
 
-    @GetMapping("/1/chat/imageToText")
+    @GetMapping("/example1/chat/imageToText")
     public String chatImageToText(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.USER_MESSAGE) String userMessage) {
         return ollamaMultimodalityService.imageToText(userMessage);
