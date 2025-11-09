@@ -113,7 +113,7 @@ curl -X 'GET' \
 ollama-prompt-engineering-controller
 
 
-## 1 User Message Not In Scope
+#### 1 User Message Not In Scope
 
 ```
 curl -X 'GET' \
@@ -122,7 +122,7 @@ curl -X 'GET' \
 ```
 
 
-## 2 User Message In Scope
+#### 2 User Message In Scope
 
 ```
 curl -X 'GET' \
@@ -132,7 +132,7 @@ curl -X 'GET' \
 ```
 
 
-## 3 User Message Prompt Type
+#### 3 User Message Prompt Type
 
 ```
 
@@ -143,14 +143,14 @@ curl -X 'GET' \
 ```
 
 
-## 4 Prompt User Spec Param Key
-
+#### 4 Prompt User Spec Param Key
+```
 
 curl -X 'GET' \
   'http://localhost:8080/ollama/promptEngineering/example4/chat/promptUserSpecParamKey?systemMessage=You%20are%20a%20friendly%20science%20writer.%20When%20writing%20about%20planets%3A%0A-%20Use%20simple%2C%20clear%20language%20for%20a%20curious%20general%20audience.%0A-%20Share%20fun%20facts%20and%20key%20traits%20for%20each%20planet%20%28like%20color%2C%20size%2C%20moons%2C%20or%20atmosphere%29.%0A&userMessage=Write%20me%20story%20about%20%7BplanetKey%7D%0A&paramKey=planetKey&paramValue=jupiter' \
   -H 'accept: */*'
 
-
+```
 
 
 ---
