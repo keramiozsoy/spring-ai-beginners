@@ -17,13 +17,13 @@ public class OllamaToolsController {
         this.ollamaToolsService = ollamaToolsService;
     }
 
-    @GetMapping("/1/chat/chatwithouttools")
+    @GetMapping("/example1/chat/chatWithoutTools")
     public String chatWithoutTools(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.ASK_ZONE_AND_TOMORROW) String userMessage) {
         return ollamaToolsService.chat(userMessage);
     }
 
-    @GetMapping("/2/chat/chatwithtools")
+    @GetMapping("/example2/chat/chatWithTools")
     public String chatWithTools(
             @RequestParam(defaultValue = CustomPrompt.UnStructured.ASK_ZONE_AND_TOMORROW) String userMessage) {
         return ollamaToolsService.chatWithTools(userMessage);
