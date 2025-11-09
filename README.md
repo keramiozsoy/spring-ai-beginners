@@ -1,14 +1,61 @@
 ## spring-ai-beginners
 
 
-# install ollama
+# Ollama
+
+####  Intall Ollama
+
 
 https://ollama.com/download
+
+
+#### Ollama Models
+
+https://ollama.com/search
+
+https://github.com/ollama/ollama?tab=readme-ov-file#model-library
+
+
+
+####  Ollama Commands
+
+
+```
+ollama serve
+```
+
+```
+kill -9 $(lsof -ti:11434)
+```
+
+
+```
+ollama
+```
+
+```
+ollama list
+```
+
+```
+ollama run llava
+```
+
+```
+ollama run qwen3:0.6b
+```
+
+```
+ollama show llava
+```
+
 
 
 # endpoints
 
 http://localhost:8080/swagger-ui/index.html
+
+
 
 
 # example model names
