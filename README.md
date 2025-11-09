@@ -113,8 +113,47 @@ curl -X 'GET' \
 ollama-prompt-engineering-controller
 
 
-## 
+## 1 User Message Not In Scope
 
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/promptEngineering/example1/chat/userMessageNotInScope?systemMessage=You%20are%20a%20friendly%20math%20teacher%20helping%20a%20child%20who%20is%20learning%20math%20for%20the%20first%20time.%0AYou%20can%20only%20discuss%20about%20the%20math.%0AOnly%20answer%20basic%20math%20questions%20like%20counting%2C%20addition%2C%20subtraction%2C%20and%20shapes.%0AIf%20the%20question%20is%20outside%20this%20scope%2C%20politely%20reply%3A%20%22You%20are%20out%20of%20scope%2C%20please%20ask%20again.%22%0A&userMessage=What%20is%20the%20weather%20today%0A' \
+  -H 'accept: */*'
+```
+
+
+## 2 User Message In Scope
+
+```
+curl -X 'GET' \
+  'http://localhost:8080/ollama/promptEngineering/example2/chat/userMessageInScope?systemMessage=You%20are%20a%20friendly%20math%20teacher%20helping%20a%20child%20who%20is%20learning%20math%20for%20the%20first%20time.%0AYou%20can%20only%20discuss%20about%20the%20math.%0AOnly%20answer%20basic%20math%20questions%20like%20counting%2C%20addition%2C%20subtraction%2C%20and%20shapes.%0AIf%20the%20question%20is%20outside%20this%20scope%2C%20politely%20reply%3A%20%22You%20are%20out%20of%20scope%2C%20please%20ask%20again.%22%0A&userMessage=teach%20me%20four%20plus%20five%0A' \
+  -H 'accept: */*'
+
+```
+
+
+## 3 User Message Prompt Type
+
+```
+
+curl -X 'GET' \
+  'http://localhost:8080/ollama/promptEngineering/example3/chat/userMessagePromptType?systemMessage=You%20are%20a%20friendly%20math%20teacher%20helping%20a%20child%20who%20is%20learning%20math%20for%20the%20first%20time.%0AYou%20can%20only%20discuss%20about%20the%20math.%0AOnly%20answer%20basic%20math%20questions%20like%20counting%2C%20addition%2C%20subtraction%2C%20and%20shapes.%0AIf%20the%20question%20is%20outside%20this%20scope%2C%20politely%20reply%3A%20%22You%20are%20out%20of%20scope%2C%20please%20ask%20again.%22%0A&userMessage=teach%20me%20four%20plus%20five%0A' \
+  -H 'accept: */*'
+
+```
+
+
+## 4 Prompt User Spec Param Key
+
+
+curl -X 'GET' \
+  'http://localhost:8080/ollama/promptEngineering/example4/chat/promptUserSpecParamKey?systemMessage=You%20are%20a%20friendly%20science%20writer.%20When%20writing%20about%20planets%3A%0A-%20Use%20simple%2C%20clear%20language%20for%20a%20curious%20general%20audience.%0A-%20Share%20fun%20facts%20and%20key%20traits%20for%20each%20planet%20%28like%20color%2C%20size%2C%20moons%2C%20or%20atmosphere%29.%0A&userMessage=Write%20me%20story%20about%20%7BplanetKey%7D%0A&paramKey=planetKey&paramValue=jupiter' \
+  -H 'accept: */*'
+
+
+
+
+---
 
 
 ## 1. OpenAI Chatbot - Simple Chat
