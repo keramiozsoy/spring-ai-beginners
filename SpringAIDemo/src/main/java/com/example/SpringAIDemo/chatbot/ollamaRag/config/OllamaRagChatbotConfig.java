@@ -61,7 +61,7 @@ public class OllamaRagChatbotConfig {
                 .ollamaApi(ollamaApi)
                 .defaultOptions(
                         OllamaOptions.builder()
-                                .model(OllamaModel.MXBAI_EMBED_LARGE) // To store sentences/words - BERT architecture
+                                .model(OllamaModel.MXBAI_EMBED_LARGE) // To store sentences/words as numbers - BERT architecture
 //                                .model(OllamaModel.NOMIC_EMBED_TEXT)
                                 .build()
                 )
