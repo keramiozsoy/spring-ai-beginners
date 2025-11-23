@@ -18,14 +18,14 @@ import java.nio.file.Paths;
 import java.util.List;
 
 @Component
-public class OllamaRagVectorDatabaseInitializer {
+public class OllamaChatbotRagVectorDatabaseInitializer {
 
     private final SimpleVectorStore vectorStore;
 
-    @Value("ollamaRag/rules/rule1.txt")
+    @Value("ollamaChatbotRag/rules/rule1.txt")
     private ClassPathResource resource;
 
-    OllamaRagVectorDatabaseInitializer(@Qualifier("ollamaRagChatbotVectorStore") SimpleVectorStore vectorStore) {
+    OllamaChatbotRagVectorDatabaseInitializer(@Qualifier("ollamaChatbotRagVectorStore") SimpleVectorStore vectorStore) {
         this.vectorStore = vectorStore;
     }
 
@@ -54,7 +54,7 @@ public class OllamaRagVectorDatabaseInitializer {
 
 
     private File getLocalVectorFile(){
-        Path path = Paths.get("src", "main","resources","ollamaRag","vectorLocal");
+        Path path = Paths.get("src", "main","resources", "ollamaChatbotRag","vectorLocal");
         String absolute = path.toFile().getAbsolutePath() + File.separator + "simpleVector.txt";
         return new File(absolute);
     }

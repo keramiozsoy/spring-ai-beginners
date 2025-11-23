@@ -21,23 +21,23 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 
 @Configuration
-public class OllamaRagChatbotConfig {
+public class OllamaChatbotRagConfig {
 
-    @Bean(name = "ollamaRagChatbotBaseUrl")
+    @Bean(name = "ollamaChatbotRagBaseUrl")
     @ConditionalOnProperty(prefix = "spring.ai.ollama", name = "base-url")
     public String baseUrl(@Value("${spring.ai.ollama.base-url}") String baseUrl) {
         return baseUrl;
     }
 
-    @Bean("ollamaRagChatbotOllamaApi")
-    public OllamaApi ollamaApi(@Qualifier("ollamaRagChatbotBaseUrl") String baseUrl){
+    @Bean("ollamaChatbotRagOllamaApi")
+    public OllamaApi ollamaApi(@Qualifier("ollamaChatbotRagBaseUrl") String baseUrl){
         return OllamaApi.builder()
                 .baseUrl(baseUrl)
                 .build();
     }
 
-    @Bean("ollamaRagChatbotOllamaChatModel")
-    public OllamaChatModel ollamaChatModel(@Qualifier("ollamaRagChatbotOllamaApi") OllamaApi ollamaApi){
+    @Bean("ollamaChatbotRagOllamaChatModel")
+    public OllamaChatModel ollamaChatModel(@Qualifier("ollamaChatbotRagOllamaApi") OllamaApi ollamaApi){
         return OllamaChatModel.builder()
                 .ollamaApi(ollamaApi)
                 .defaultOptions(
@@ -55,8 +55,8 @@ public class OllamaRagChatbotConfig {
     }
 
 
-    @Bean("ollamaRagChatbotEmbeddingModel")
-    public OllamaEmbeddingModel embeddingModel(@Qualifier("ollamaRagChatbotOllamaApi") OllamaApi ollamaApi) {
+    @Bean("ollamaChatbotRagEmbeddingModel")
+    public OllamaEmbeddingModel embeddingModel(@Qualifier("ollamaChatbotRagOllamaApi") OllamaApi ollamaApi) {
         return OllamaEmbeddingModel.builder()
                 .ollamaApi(ollamaApi)
                 .defaultOptions(
@@ -72,13 +72,13 @@ public class OllamaRagChatbotConfig {
                 .build();
     }
 
-    @Bean("ollamaRagChatbotVectorStore")
-    public SimpleVectorStore vectorStore(@Qualifier("ollamaRagChatbotEmbeddingModel") EmbeddingModel embeddingModel) {
+    @Bean("ollamaChatbotRagVectorStore")
+    public SimpleVectorStore vectorStore(@Qualifier("ollamaChatbotRagEmbeddingModel") EmbeddingModel embeddingModel) {
         return SimpleVectorStore.builder(embeddingModel).build();
     }
 
-    @Bean("ollamaRagChatbotRagAdvisor")
-    public RetrievalAugmentationAdvisor ragAdvisor(@Qualifier("ollamaRagChatbotVectorStore") VectorStore vectorStore) {
+    @Bean("ollamaChatbotRagRagAdvisor")
+    public RetrievalAugmentationAdvisor ragAdvisor(@Qualifier("ollamaChatbotRagVectorStore") VectorStore vectorStore) {
         return RetrievalAugmentationAdvisor.builder()
                 .documentRetriever(VectorStoreDocumentRetriever.builder()
                         .similarityThreshold(0.50)
@@ -88,12 +88,12 @@ public class OllamaRagChatbotConfig {
     }
 
 
-    @Bean("ollamaRagChatbotChatClient")
-    public ChatClient ollamaChatClient(@Qualifier("ollamaRagChatbotOllamaChatModel") OllamaChatModel chatModel,
-                                       @Qualifier("ollamaRagChatbotRagAdvisor") RetrievalAugmentationAdvisor ragAdvisor) {
+    @Bean("ollamaChatbotRagChatClient")
+    public ChatClient ollamaChatClient(@Qualifier("ollamaChatbotRagOllamaChatModel") OllamaChatModel chatModel,
+                                       @Qualifier("ollamaChatbotRagRagAdvisor") RetrievalAugmentationAdvisor ragAdvisor) {
 
 
-        ClassPathResource systemPrompt = new ClassPathResource("ollamaRag/prompts/systemPrompt1.txt");
+        ClassPathResource systemPrompt = new ClassPathResource("ollamaChatbotRag/prompts/systemPrompt1.txt");
 
         return ChatClient.builder(chatModel)
                 .defaultAdvisors(ragAdvisor)

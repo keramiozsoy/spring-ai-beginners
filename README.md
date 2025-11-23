@@ -267,9 +267,9 @@ curl -X 'GET' \
 
 
 
-## Rag - Document
+## Chatbot Rag - Document
 
-ollama-rag-chatbot-controller
+ollama-chatbot-rag--controller
 
 
 #### 1 Out of rule context
@@ -277,7 +277,7 @@ ollama-rag-chatbot-controller
 ```
 
 curl -X 'GET' \
-  'http://localhost:8080/ollama/rag/chatbot/example1/chat/outOfContext?userMessage=Hello%20How%20are%20you%0A' \
+  'http://localhost:8080/ollama/chatbot/rag/example1/chat/outOfContext?userMessage=Hello%20How%20are%20you%0A' \
   -H 'accept: */*'
 ```
 
@@ -286,7 +286,7 @@ curl -X 'GET' \
 
 ```
 curl -X 'GET' \
-  'http://localhost:8080/ollama/rag/chatbot/example2/chat/inContextNotPermitted?userMessage=Tell%20us%20something%20about%20Research%20and%20Development%0A' \
+  'http://localhost:8080/ollama/chatbot/rag/example2/chat/inContextNotPermitted?userMessage=Tell%20us%20something%20about%20Research%20and%20Development%0A' \
   -H 'accept: */*'
 
 ```
@@ -297,7 +297,7 @@ Rag Store is ready.
 
 ```
 curl -X 'GET' \
-  'http://localhost:8080/ollama/rag/chatbot/example3/chat/inContext?userMessage=Tell%20us%20something%20about%20Human%20Resources%20Department%0A' \
+  'http://localhost:8080/ollama/chatbot/rag/example3/chat/inContext?userMessage=Tell%20us%20something%20about%20Human%20Resources%20Department%0A' \
   -H 'accept: */*'
 
 ```
