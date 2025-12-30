@@ -29,7 +29,7 @@ public class LessonService {
     public void init() {
         lessons.addAll(List.of(
                 new Lesson("Building Web Applications with Spring Boot (FreeCodeCamp)", "https://youtu.be/31KTdfRH6nY"),
-                new Lesson("Spring Boot Tutorial for Beginners - 2023 Crash Course using Spring Boot 3","https://youtu.be/UgX5lgv4uVM")
+                new Lesson("The Model Context Protocol (MCP)","https://youtu.be/CQywdSdi5iA")
         ));
     }
 
