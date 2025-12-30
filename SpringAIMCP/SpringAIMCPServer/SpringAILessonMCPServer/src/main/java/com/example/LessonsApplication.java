@@ -9,15 +9,15 @@ import org.springframework.context.annotation.Bean;
 import java.util.List;
 
 @SpringBootApplication
-public class CoursesApplication {
+public class LessonsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CoursesApplication.class, args);
+		SpringApplication.run(LessonsApplication.class, args);
 	}
 
 	@Bean
-	public List<ToolCallback> danTools(CourseService courseService) {
-		return List.of(ToolCallbacks.from(courseService));
+	public List<ToolCallback> lessonTools (LessonService lessonService) {
+		return List.of(ToolCallbacks.from(lessonService));
 	}
 
 }
